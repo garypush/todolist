@@ -13,14 +13,14 @@ User can add, update, remove or complete to-do items.
 * (Windows only) Add "127.0.0.1 todolist" to hosts file under c:\Windows\System32\Drivers\etc\hosts, and change axios.defaults.baseURL inside file todolist.component.js to use http://todolist:8000.
 * Start the container:
 ```
-docker-compose up
+$ docker-compose up
 ```
 * SSH into server container to sync db:
 ```
-docker exec -i -t todolist_server_1 bash
-// inside container
-cd todolist.core
-python manage.py migrate
+$ docker exec -i -t todolist_server_1 bash
+# inside container
+$ cd todolist.core
+$ python manage.py migrate
 ```
 * Open http://todolist:8001
 
@@ -31,8 +31,8 @@ python manage.py migrate
 SSH into todolist_server_1 container and run the test
 
 ```
-docker exec -i -t todolist_server_1 bash
-// inside container
-cd todolist.core
-./manage.py test tests/
+$ docker exec -i -t todolist_server_1 bash
+# inside container
+$ cd todolist.core
+$ ./manage.py test tests/
 ```
