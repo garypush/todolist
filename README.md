@@ -22,7 +22,7 @@ $ docker exec -i -t todolist_server_1 bash
 $ cd todolist.core
 $ python manage.py migrate
 ```
-* Open http://todolist:8001
+* Open http://todolist:8001 (Windows) or http://localhost:8001 (MacOS)
 
 ## Running the tests
 
